@@ -3,29 +3,27 @@
 <head>
 	<title>Linzeporeの新大陆</title>
 	<style>
-/*光标动画*/
-@keyframes caret {
-	50% {
-	border-color:transparent;
+.typing {
+    width: 15em;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    animation: typing 3.5s steps(15, end), blink-caret .75s step-end infinite;
+    overflow: hidden;
 }
-}/*文本动画：从宽度为0开始*/
-@keyframes text {
-	from {
-	width:0;
+/* 打印效果 */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 15em; }
 }
-}.load-text {
-	margin:0 auto;
-	overflow:hidden;
-	word-break:keep-all;
-	color:#b1f1f3;
-	border-right:3px solid #000000;
-	font:bold 400% monospace;
-	animation:caret 0.5s step-end infinite,text 5s infinite steps(11);
+/* 光标闪啊闪 */
+@keyframes blink-caret {
+  from, to { box-shadow: 1px 0 0 0 transparent; }
+  50% { box-shadow: 1px 0 0 0; }
 }
 	</style>
 </head>
 <body>
-	<h1 class="load-text">Hello , Zepore的新大陆</h1><hr/>
+	<h1 class="typing">Hello , Zepore的新大陆</h1><hr/>
 	<h2>欢迎发现新大陆的你，正在施工中...</h2>
 	<h3>Preparing...</h3>
 </body>
