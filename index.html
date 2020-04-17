@@ -21,11 +21,27 @@
     from, to { border-color: transparent; }
     50% { border-color: currentColor; }
 }
+		wavy {
+    display: block;
+    height: .5em;
+    white-space: nowrap;
+    letter-spacing: 100vw;
+    padding-top: .5em;
+    overflow: hidden;
+}
+wavy::before {
+    content: "\2000\2000";
+    /* IE浏览器实线代替 */
+    text-decoration: overline;
+    /* 现代浏览器 */
+    text-decoration: overline wavy;
+}
 	</style>
 </head>
 <body>
 	<h1 class="typing">Hello,Zepore的新大陆</h1><hr/>
-	<article><h2>欢迎发现新大陆的你，正在施工中...</h2>
-		<h3>Preparing...</h3></article>
+	<h2>欢迎发现新大陆的你，正在施工中...</h2>
+		<h3>Preparing...</h3>
+	<wavy>test</wavy>
 </body>
 </html>
