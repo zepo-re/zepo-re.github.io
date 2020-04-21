@@ -85,6 +85,7 @@
 			line-height: 100px;
 			color: #797979;
 			font-family: Consolas, Monaco，Source Han Sans;
+			height: 100px;
 		}
 		.li-1:hover{
 			color: #474747;
@@ -101,6 +102,7 @@
 			color: #5a838c;
 			border: 4px dashed #5A818A;
 			background-color:rgba(227,227,227,.5);
+			font-family: Consolas, Monaco，Source Han Sans;
 
 		}
 		/*打字效果全栏*/
@@ -136,6 +138,22 @@ wavy::before {
     text-decoration: overline;
     /* 现代浏览器 */
     text-decoration: overline wavy;
+}
+@media screen and (max-width: 580px) {
+    .li-1 {
+        display:none;
+    }
+    .li-2{
+    	left:0;
+    }
+}
+@media screen and (max-width: 300px) {
+    .li-1 {
+        display:none;
+    }
+    .li-2{
+    	display:none;
+    }
 }
 	</style>
 </head>
